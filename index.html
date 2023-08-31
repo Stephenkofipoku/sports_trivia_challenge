@@ -23,7 +23,35 @@
       Challenge
     </h1>
 
-    <div class="game-area"></div>
+    <div class="game-area">
+      <div class="controls-area">
+        <button class="btn btn--big btn--history">
+          <i class="fa-solid fa-landmark"></i>
+        </button>
+        <button class="btn btn--big btn--rules">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </button>
+        <button class="btn btn--big btn--records">
+          <i class="fa-solid fa-record-vinyl"></i>
+        </button>
+        <button class="btn btn--big btn--teams">
+          <i class="fa-solid fa-people-group"></i>
+        </button>
+        <button class="btn btn--big btn--quotes">
+          <i class="fa-solid fa-quote-left"></i>
+        </button>
+      </div>
+      <div class="question-area">
+        <span id="history"></span>
+        <span id="rules"></span>
+        <span id="records"></span>
+        <span id="teams"></span>
+        <span id="quotes"></span>
+        <p class="answer-message">Enter Answer:</p>
+        <input id="answer-box" type="text" />
+      </div>
+      <button class="btn btn--answer"></button>
+    </div>
     <div class="score-area">
       <p class="scores">Correct Answers <span id="score">0</span></p>
       <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
