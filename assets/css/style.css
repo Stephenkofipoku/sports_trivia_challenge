@@ -11,3 +11,10 @@ body {
     text-align: center;
     font-size: 2.5rem;
 }
+
+/* Logo style */
+
+.logo {
+    height: 40px;
+    padding-right: 5px;
+}
