@@ -69,9 +69,21 @@ body {
     color: #007bff;
 }
 
+.btn--history:active,
+.btn--history:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
 .btn--rules {
     border-color: #dc3545;
     color: #dc3545;
+}
+
+.btn--rules:active,
+.btn--rules:hover {
+    background-color: #b3001e;
+    color: white;
 }
 
 .btn--records {
@@ -79,14 +91,32 @@ body {
     color: #17a2b8;
 }
 
+.btn--records:active,
+.btn--records:hover {
+    background-color: #0c6b77;
+    color: white;
+}
+
 .btn--teams {
     border-color: #ffc107;
     color: #ffc107;
 }
 
+.btn--teams:active,
+.btn--teams:hover {
+    background-color: #b28f00;
+    color: white;
+}
+
 .btn--quotes {
     border-color: #28a745;
     color: #28a745;
+}
+
+.btn--quotes:active,
+.btn--quotes:hover {
+    background-color: #1c7a33;
+    color: white;
 }
 
 .btn--big {
