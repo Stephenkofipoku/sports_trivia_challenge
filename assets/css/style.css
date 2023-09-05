@@ -131,6 +131,16 @@ body {
     transition: all 0.5s;
 }
 
+/* Add labels to game type icons */
+.btn--big::after {
+    content: attr(data-label);
+    font-size: 1rem;
+    color: #445361;
+    position: relative;
+    left: -0.5em;
+    text-transform: capitalize;
+}
+
 /* Style for controls area */
 
 .controls-area {
