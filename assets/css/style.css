@@ -185,3 +185,28 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .game-area {
+        width: 95%;
+        height: 80vh;
+    }
+
+    .question-area {
+        width: 80%;
+        font-size: 1.5rem;
+        padding: 20px 0;
+    }
+
+    .btn--big {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
+    .score-area {
+        width: 80%;
+        font-size: 1rem;
+    }
+}

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Sports Trivia Challenge</title>
   </head>
+
   <body>
     <h1 class="heading">
       <img class="logo" src="assets/images/sport.png" alt="logo" />Sports Trivia
@@ -29,38 +30,64 @@
           id="history"
           data-type="addition"
           class="btn btn--big btn--history"
-         data-label="history">
+          data-label="history"
+        >
           <i class="fa-solid fa-landmark"></i>
         </button>
-        <button id="rules" data-type="addition" class="btn btn--big btn--rules" data-label="rules">
+        <button
+          id="rules"
+          data-type="addition"
+          class="btn btn--big btn--rules"
+          data-label="rules"
+        >
           <i class="fa-solid fa-scale-balanced"></i>
         </button>
         <button
           id="records"
           data-type="addition"
           class="btn btn--big btn--records"
-         data-label="records">
+          data-label="records"
+        >
           <i class="fa-solid fa-record-vinyl"></i>
         </button>
-        <button id="teams" data-type="addition" class="btn btn--big btn--teams" data-label="teams">
+        <button
+          id="teams"
+          data-type="addition"
+          class="btn btn--big btn--teams"
+          data-label="teams"
+        >
           <i class="fa-solid fa-people-group"></i>
         </button>
         <button
           id="quotes"
           data-type="addition"
           class="btn btn--big btn--quotes"
-         data-label="quotes">
+          data-label="quotes"
+        >
           <i class="fa-solid fa-quote-left"></i>
         </button>
       </div>
       <div class="question-area">
-        <span id="history"></span>
-        <span id="rules"></span>
-        <span id="records"></span>
-        <span id="teams"></span>
-        <span id="quotes"></span>
-        <p class="answer-message">Enter Answer:</p>
-        <input id="answer-box" type="text" />
+        <div id="history-question" class="question-container"></div>
+        <div id="rules-question" class="question-container"></div>
+        <div id="records-question" class="question-container"></div>
+        <div id="teams-question" class="question-container"></div>
+        <div id="quotes-question" class="question-container"></div>
+        <div class="answer-container">
+          <p class="answer-message">Select Answer:</p>
+          <label class="answer-option">
+            <input type="radio" name="answer" value="option1" />
+            <span id="option1"></span>
+          </label>
+          <label class="answer-option">
+            <input type="radio" name="answer" value="option2" />
+            <span id="option2"></span>
+          </label>
+          <label class="answer-option">
+            <input type="radio" name="answer" value="option3" />
+            <span id="option3"></span>
+          </label>
+        </div>
       </div>
       <button data-type="submit" class="btn btn--answer">Submit Answer</button>
     </div>
