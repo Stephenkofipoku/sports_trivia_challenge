@@ -17,3 +17,43 @@ instructionButton.addEventListener('click', toggleModal);
 
 // Add event listener to the close modal button
 closeModalButton.addEventListener('click', toggleModal);
+
+function runGame() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function calculateCorrectAnswer() {
+
+}
+
+function incrementScore() {
+
+}
+
+function inrementWrongAnswer() {
+
+}
+
+function displayHistoryQuestion() {
+
+}
+
+function displayRulesQuestion() {
+
+}
+
+function displayRecordsQuestion() {
+
+}
+
+function displayTeamsQuestion() {
+
+}
+
+function displayQuotesQuestion() {
+    
+}
