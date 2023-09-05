@@ -138,7 +138,7 @@ body {
     color: #445361;
     position: relative;
     left: -0.5em;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 /* Style for controls area */
