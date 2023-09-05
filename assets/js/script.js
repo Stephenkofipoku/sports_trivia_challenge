@@ -18,42 +18,38 @@ instructionButton.addEventListener('click', toggleModal);
 // Add event listener to the close modal button
 closeModalButton.addEventListener('click', toggleModal);
 
-function runGame() {
+// Wait for the DOM to finish loading before starting the game
+document.addEventListener("DOMContentLoaded", function() {
+  let buttons = document.getElementsByTagName("button");
 
-}
+  for (let button of buttons) {
+    button.addEventListener("click", function() {
+      if (this.getAttribute("data-type") === "submit") {
+        alert("You clicked submit!");
+      } else {
+        let gameType = this.getAttribute("data-type");
+        alert(`You clicked ${gameType}`);
+      }
+    });
+  }
+});
 
-function checkAnswer() {
+function runGame() {}
 
-}
+function checkAnswer() {}
 
-function calculateCorrectAnswer() {
+function calculateCorrectAnswer() {}
 
-}
+function incrementScore() {}
 
-function incrementScore() {
+function incrementWrongAnswer() {}
 
-}
+function displayHistoryQuestion() {}
 
-function inrementWrongAnswer() {
+function displayRulesQuestion() {}
 
-}
+function displayRecordsQuestion() {}
 
-function displayHistoryQuestion() {
+function displayTeamsQuestion() {}
 
-}
-
-function displayRulesQuestion() {
-
-}
-
-function displayRecordsQuestion() {
-
-}
-
-function displayTeamsQuestion() {
-
-}
-
-function displayQuotesQuestion() {
-    
-}
+function displayQuotesQuestion() {}
