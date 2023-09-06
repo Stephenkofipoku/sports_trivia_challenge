@@ -9,7 +9,7 @@ const closeModalButton = document.getElementById('close-modal');
 
 // Function to toggle the visibility of the modal overlay
 function toggleModal() {
-  modalOverlay.style.display = modalOverlay.style.display === 'none' ? 'flex' : 'none';
+    modalOverlay.style.display = modalOverlay.style.display === 'none' ? 'flex' : 'none';
 }
 
 // Add event listeners to the instruction button and close modal button
@@ -56,19 +56,38 @@ const historyQuestions = [
     },
 ];
 
+let currentQuestionIndex = 0;
+
 // Function to display a random history question
 function displayRandomHistoryQuestion() {
-    const randomQuestion = historyQuestions[Math.floor(Math.random() * historyQuestions.length)];
+    const randomQuestionIndex = Math.floor(Math.random() * historyQuestions.length);
+    const randomQuestion = historyQuestions[randomQuestionIndex];
 
-    questionArea.textContent = randomQuestion.question;
+    // Clear previous options
+    questionArea.innerHTML = '';
+
+    const questionElement = document.createElement('div');
+    questionElement.classList.add('question');
+    questionElement.textContent = randomQuestion.question;
+    questionArea.appendChild(questionElement);
+
+    const optionsContainer = document.createElement('div');
+    optionsContainer.classList.add('options-container');
 
     for (let i = 0; i < randomQuestion.options.length; i++) {
         const option = randomQuestion.options[i];
-        const optionElement = document.createElement('span');
+        const optionElement = document.createElement('button');
         optionElement.textContent = option;
+        optionElement.classList.add('option');
         optionElement.setAttribute('data-index', i);
-        questionArea.appendChild(optionElement);
+        optionElement.addEventListener('click', handleAnswerSelection);
+        optionsContainer.appendChild(optionElement);
     }
+
+    questionArea.appendChild(optionsContainer);
+
+    // Store the index of the current question
+    currentQuestionIndex = randomQuestionIndex;
 }
 
 // Display a random history question initially
@@ -76,9 +95,9 @@ displayRandomHistoryQuestion();
 
 // Function to check the selected answer
 function checkAnswer(selectedIndex) {
-    const randomQuestion = historyQuestions[Math.floor(Math.random() * historyQuestions.length)];
+    const question = historyQuestions[currentQuestionIndex];
 
-    if (selectedIndex === randomQuestion.correctAnswer) {
+    if (selectedIndex === question.correctAnswer) {
         incrementScore();
         alert("Correct answer!");
     } else {
@@ -102,11 +121,40 @@ function incrementIncorrect() {
     incorrectElement.textContent = incorrect;
 }
 
-// Add event listeners to options
-questionArea.addEventListener('click', (event) => {
-    const selectedIndex = event.target.getAttribute('data-index');
+// Function to handle answer selection
+function handleAnswerSelection(event) {
+    const selectedIndex = parseInt(event.target.getAttribute('data-index'));
+    checkAnswer(selectedIndex);
+}
 
-    if (selectedIndex !== null) {
-        checkAnswer(parseInt(selectedIndex));
+// Get the submit button element
+const submitButton = document.getElementById('submit-button');
+
+// Add event listener to the submit button
+submitButton.addEventListener('click', handleAnswerSubmission);
+
+// Function to handle answer submission
+function handleAnswerSubmission() {
+    // Check if an answer has been selected
+    const selectedOption = questionArea.querySelector('.option.selected');
+    if (selectedOption) {
+        const selectedIndex = parseInt(selectedOption.getAttribute('data-index'));
+        checkAnswer(selectedIndex);
+        // Remove the selected class from the option
+        selectedOption.classList.remove('selected');
+    } else {
+        alert("Please select an answer.");
+    }
+}
+
+// Add event listeners to options for selection
+questionArea.addEventListener('click', (event) => {
+    const selectedOption = event.target;
+    if (selectedOption.classList.contains('option')) {
+        const allOptions = questionArea.querySelectorAll('.option');
+        allOptions.forEach((option) => {
+            option.classList.remove('selected');
+        });
+        selectedOption.classList.add('selected');
     }
 });
