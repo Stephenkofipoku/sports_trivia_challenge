@@ -155,34 +155,36 @@ const recordsQuestions = [
 ];
 
 // Sports teams and logos questions
-const teamLogoQuestions = [
+const teamsQuestions = [
     {
-        description: "This team's logo features a blue star. Which team does it represent?",
-        options: ["Dallas Cowboys", "New England Patriots", "Green Bay Packers"],
+        question: "Which city is home to the team with a logo featuring a bear wearing a helmet?",
+        options: ["Chicago", "New York", "Los Angeles"],
         correctAnswer: 0,
     },
     {
-        description: "Which team's logo features a yellow and black bumblebee?",
-        options: ["Pittsburgh Steelers", "Seattle Seahawks", "Detroit Lions"],
+        question: "The team with a logo of a horse is based in which city?",
+        options: ["Denver", "Seattle", "Miami"],
         correctAnswer: 0,
     },
     {
-        description: "This team's logo has a red and white maple leaf. Which team is it?",
-        options: ["Toronto Maple Leafs", "Montreal Canadiens", "Vancouver Canucks"],
+        question: "Which city is represented by the team with a logo featuring a roaring lion?",
+        options: ["Detroit", "Dallas", "Atlanta"],
+        correctAnswer: 0,
+    },
+    {
+        question: "The team with a logo of a pirate is based in which city?",
+        options: ["Pittsburgh", "San Francisco", "New Orleans"],
+        correctAnswer: 0,
+    },
+    {
+        question: "Which city is home to the team with a logo featuring a basketball and a crown?",
+        options: ["Sacramento", "Cleveland", "Houston"],
         correctAnswer: 1,
-    },
-    {
-        description: "Which team's logo features a basketball with a leaping cat?",
-        options: ["Chicago Bulls", "Los Angeles Lakers", "Charlotte Hornets"],
-        correctAnswer: 2,
-    },
-    {
-        description: "This team's logo has a green shamrock. Which team does it represent?",
-        options: ["Boston Celtics", "Los Angeles Clippers", "Denver Nuggets"],
-        correctAnswer: 0,
     },
 ];
 
+// Add the team logo questions to the game type
+gameTypes.teams = teamLogoQuestions;
 
 let currentQuestionIndex = 0;
 let currentGameType = historyQuestions; // Set the default game type to history
