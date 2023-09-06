@@ -321,6 +321,7 @@ const historyButton = document.getElementById('history');
 const rulesButton = document.getElementById('rules');
 const recordsButton = document.getElementById('records');
 const teamsButton = document.getElementById('teams');
+const quotesButton = document.getElementById('quotes');
 
 // Add event listeners to game type buttons
 historyButton.addEventListener('click', () => {
@@ -340,5 +341,10 @@ recordsButton.addEventListener('click', () => {
 
 teamsButton.addEventListener('click', () => {
     currentGameType = teamsQuestions;
+    displayRandomQuestion();
+});
+
+quotesButton.addEventListener('click', () => {
+    currentGameType = quotesQuestions;
     displayRandomQuestion();
 });
