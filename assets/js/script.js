@@ -183,6 +183,35 @@ const teamsQuestions = [
     },
 ];
 
+// Sports quotes and sayings questions
+const quotesQuestions = [
+  {
+    question: "Which athlete is known for the quote: 'I've failed over and over and over again in my life. And that is why I succeed.'?",
+    options: ["Michael Jordan", "Serena Williams", "Tom Brady"],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which sport is associated with the quote: 'It's not whether you get knocked down, it's whether you get up.'?",
+    options: ["Boxing", "Soccer", "American football"],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which athlete is known for the quote: 'You miss 100% of the shots you don't take.'?",
+    options: ["Wayne Gretzky", "LeBron James", "Usain Bolt"],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which sport is associated with the quote: 'Hard work beats talent when talent doesn't work hard.'?",
+    options: ["Basketball", "Swimming", "Track and field"],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which athlete is known for the quote: 'The difference between the impossible and the possible lies in a person's determination.'?",
+    options: ["Muhammad Ali", "Simone Biles", "Roger Federer"],
+    correctAnswer: 0,
+  },
+];
+
 let currentQuestionIndex = 0;
 let currentGameType = historyQuestions; // Set the default game type to history
 
