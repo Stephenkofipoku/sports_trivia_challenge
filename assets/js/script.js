@@ -154,6 +154,36 @@ const recordsQuestions = [
     },
 ];
 
+// Sports teams and logos questions
+const teamLogoQuestions = [
+    {
+        description: "This team's logo features a blue star. Which team does it represent?",
+        options: ["Dallas Cowboys", "New England Patriots", "Green Bay Packers"],
+        correctAnswer: 0,
+    },
+    {
+        description: "Which team's logo features a yellow and black bumblebee?",
+        options: ["Pittsburgh Steelers", "Seattle Seahawks", "Detroit Lions"],
+        correctAnswer: 0,
+    },
+    {
+        description: "This team's logo has a red and white maple leaf. Which team is it?",
+        options: ["Toronto Maple Leafs", "Montreal Canadiens", "Vancouver Canucks"],
+        correctAnswer: 1,
+    },
+    {
+        description: "Which team's logo features a basketball with a leaping cat?",
+        options: ["Chicago Bulls", "Los Angeles Lakers", "Charlotte Hornets"],
+        correctAnswer: 2,
+    },
+    {
+        description: "This team's logo has a green shamrock. Which team does it represent?",
+        options: ["Boston Celtics", "Los Angeles Clippers", "Denver Nuggets"],
+        correctAnswer: 0,
+    },
+];
+
+
 let currentQuestionIndex = 0;
 let currentGameType = historyQuestions; // Set the default game type to history
 
