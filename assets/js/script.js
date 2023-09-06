@@ -56,12 +56,62 @@ const historyQuestions = [
     },
 ];
 
-let currentQuestionIndex = 0;
+// Sports rules and regulations questions
+const rulesQuestions = [
+    {
+        question: "What happens if a player receives two yellow cards in a single match?",
+        options: [
+            "The player is sent off with a red card",
+            "The player is suspended for the next match",
+            "The player is allowed to continue playing"
+        ],
+        correctAnswer: 0,
+    },
+    {
+        question: "How many times can a tennis player hit the ball before it must cross the net?",
+        options: [
+            "Once",
+            "Twice",
+            "Three times"
+        ],
+        correctAnswer: 0,
+    },
+    {
+        question: "In a 100-meter sprint, what happens if an athlete false starts?",
+        options: [
+            "The athlete is disqualified",
+            "The race is restarted",
+            "The athlete receives a time penalty"
+        ],
+        correctAnswer: 0,
+    },
+    {
+        question: "How long can a player hold the ball without dribbling in basketball?",
+        options: [
+            "3 seconds",
+            "5 seconds",
+            "8 seconds"
+        ],
+        correctAnswer: 1,
+    },
+    {
+        question: "What is the maximum number of clubs a golfer is allowed to carry in their bag during a round?",
+        options: [
+            "10 clubs",
+            "14 clubs",
+            "18 clubs"
+        ],
+        correctAnswer: 1,
+    },
+];
 
-// Function to display a random history question
-function displayRandomHistoryQuestion() {
-    const randomQuestionIndex = Math.floor(Math.random() * historyQuestions.length);
-    const randomQuestion = historyQuestions[randomQuestionIndex];
+let currentQuestionIndex = 0;
+let currentGameType = historyQuestions; // Set the default game type to history
+
+// Function to display a random question
+function displayRandomQuestion() {
+    const randomQuestionIndex = Math.floor(Math.random() * currentGameType.length);
+    const randomQuestion = currentGameType[randomQuestionIndex];
 
     // Clear previous options
     questionArea.innerHTML = '';
@@ -91,11 +141,11 @@ function displayRandomHistoryQuestion() {
 }
 
 // Display a random history question initially
-displayRandomHistoryQuestion();
+displayRandomQuestion();
 
 // Function to check the selected answer
 function checkAnswer(selectedIndex) {
-    const question = historyQuestions[currentQuestionIndex];
+    const question = currentGameType[currentQuestionIndex];
 
     if (selectedIndex === question.correctAnswer) {
         incrementScore();
@@ -105,8 +155,8 @@ function checkAnswer(selectedIndex) {
         alert("Wrong answer!");
     }
 
-    // Display a new random history question
-    displayRandomHistoryQuestion();
+    // Display a new random question
+    displayRandomQuestion();
 }
 
 // Function to increment the score
@@ -157,4 +207,19 @@ questionArea.addEventListener('click', (event) => {
         });
         selectedOption.classList.add('selected');
     }
+});
+
+// Get the game type buttons
+const historyButton = document.getElementById('history');
+const rulesButton = document.getElementById('rules');
+
+// Add event listeners to game type buttons
+historyButton.addEventListener('click', () => {
+    currentGameType = historyQuestions;
+    displayRandomQuestion();
+});
+
+rulesButton.addEventListener('click', () => {
+    currentGameType = rulesQuestions;
+    displayRandomQuestion();
 });
