@@ -183,9 +183,6 @@ const teamsQuestions = [
     },
 ];
 
-// Add the team logo questions to the game type
-gameTypes.teams = teamLogoQuestions;
-
 let currentQuestionIndex = 0;
 let currentGameType = historyQuestions; // Set the default game type to history
 
@@ -294,6 +291,7 @@ questionArea.addEventListener('click', (event) => {
 const historyButton = document.getElementById('history');
 const rulesButton = document.getElementById('rules');
 const recordsButton = document.getElementById('records');
+const teamsButton = document.getElementById('teams');
 
 // Add event listeners to game type buttons
 historyButton.addEventListener('click', () => {
@@ -308,5 +306,10 @@ rulesButton.addEventListener('click', () => {
 
 recordsButton.addEventListener('click', () => {
     currentGameType = recordsQuestions;
+    displayRandomQuestion();
+});
+
+teamsButton.addEventListener('click', () => {
+    currentGameType = teamsQuestions;
     displayRandomQuestion();
 });
