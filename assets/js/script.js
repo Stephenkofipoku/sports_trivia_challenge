@@ -105,6 +105,55 @@ const rulesQuestions = [
     },
 ];
 
+// Sports records and statistics questions
+const recordsQuestions = [
+    {
+        question: "Who holds the record for the most home runs in a single MLB season?",
+        options: [
+            "Babe Ruth",
+            "Barry Bonds",
+            "Hank Aaron"
+        ],
+        correctAnswer: 1,
+    },
+    {
+        question: "Which basketball player has the highest career points per game average in the NBA?",
+        options: [
+            "Michael Jordan",
+            "LeBron James",
+            "Wilt Chamberlain"
+        ],
+        correctAnswer: 2,
+    },
+    {
+        question: "Which soccer player has scored the most goals in FIFA World Cup history?",
+        options: [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose"
+        ],
+        correctAnswer: 2,
+    },
+    {
+        question: "Who holds the record for the most Olympic gold medals won by an athlete?",
+        options: [
+            "Usain Bolt",
+            "Michael Phelps",
+            "Simone Biles"
+        ],
+        correctAnswer: 1,
+    },
+    {
+        question: "Which NFL quarterback has the most career passing yards?",
+        options: [
+            "Peyton Manning",
+            "Tom Brady",
+            "Drew Brees"
+        ],
+        correctAnswer: 2,
+    },
+];
+
 let currentQuestionIndex = 0;
 let currentGameType = historyQuestions; // Set the default game type to history
 
@@ -189,7 +238,7 @@ function handleAnswerSubmission() {
     const selectedOption = questionArea.querySelector('.option.selected');
     if (selectedOption) {
         const selectedIndex = parseInt(selectedOption.getAttribute('data-index'));
-        checkAnswer(selectedIndex);
+        checkAnswerSubmission(selectedIndex);
         // Remove the selected class from the option
         selectedOption.classList.remove('selected');
     } else {
@@ -212,6 +261,7 @@ questionArea.addEventListener('click', (event) => {
 // Get the game type buttons
 const historyButton = document.getElementById('history');
 const rulesButton = document.getElementById('rules');
+const recordsButton = document.getElementById('records');
 
 // Add event listeners to game type buttons
 historyButton.addEventListener('click', () => {
@@ -221,5 +271,10 @@ historyButton.addEventListener('click', () => {
 
 rulesButton.addEventListener('click', () => {
     currentGameType = rulesQuestions;
+    displayRandomQuestion();
+});
+
+recordsButton.addEventListener('click', () => {
+    currentGameType = recordsQuestions;
     displayRandomQuestion();
 });
