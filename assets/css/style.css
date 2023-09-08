@@ -195,7 +195,7 @@ body {
         height: 100px;
         font-size: 1.7rem;
         margin: 0 5px;
-        padding-top: 0; 
+        padding-top: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -211,7 +211,7 @@ body {
     /* Adjust question area */
     .question-area {
         width: 90%;
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         padding: 40px 0;
     }
 }
@@ -244,58 +244,61 @@ body {
 
 /* Media query screen size 520px and down */
 @media screen and (max-width: 520px) {
-  /* Adjust game type icons */
-  .btn--big {
-    width: 80px;
-    height: 80px;
-    font-size: 1.2rem;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  /* Adjust game type icon labels */
-  .btn--big::after {
-    font-size: 0.6rem;
-    margin-top: 5px;
-  }
+    /* Adjust game type icons */
+    .btn--big {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  /* Adjust game type icon container */
-  .question-area {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-  }
+    /* Adjust game type icon labels */
+    .btn--big::after {
+        font-size: 0.6rem;
+        margin-top: 5px;
+    }
+
+    /* Adjust game type icon container */
+    .question-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
 }
+
 
 /* Media query 480px and down */
 @media screen and (max-width: 480px) {
-  /* Adjust game type icons */
-  .btn--big {
-    width: 60px;
-    height: 60px;
-    font-size: 1.2rem;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  /* Adjust game type icon labels */
-  .btn--big::after {
-    font-size: 0.5rem;
-    margin-top: 5px;
-  }
+    /* Adjust game type icons */
+    .btn--big {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  /* Adjust game type icon container */
-  .question-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    /* Adjust game type icon labels */
+    .btn--big::after {
+        font-size: 0.5rem;
+        margin-top: 5px;
+    }
+
+    /* Adjust game type icon container */
+    .question-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 /* Media query 375px screen size and down */
