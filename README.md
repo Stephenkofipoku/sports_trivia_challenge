@@ -1,31 +1,11 @@
 # Sports Trivia Challenge README
 
+## Introduction
+
 Welcome to Sports Trivia Challenge, the ultimate destination for all sports enthusiasts! Test your knowledge and compete against friends as you dive into the exciting world of sports trivia. With a wide range of categories and challenging questions, this interactive website will put your sports knowledge to the test.
 
 Explore various categories such as Sports Trivia, Sports History, Sports Figures, English Premier League, Spanish League, UEFA Champions League, German Bundesliga, and the prestigious Ballon d'Or Awards. Each category offers a unique set of questions that will challenge your expertise in different aspects of the sports world.
 
-## Codeanywhere Reminders
+## Purpose
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+The purpose of the website is to provide an engaging Sports Trivia Challenge for users to test their sports knowledge. With a variety of game types and responsive design, the website offers an interactive experience where players can select their preferred category, answer trivia questions, and earn points. The website aims to entertain and challenge sports enthusiasts while providing a seamless user experience across different screen sizes. Whether playing on a desktop or mobile device, users can enjoy the Sports Trivia Challenge and have fun while expanding their sports knowledge.
