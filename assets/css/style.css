@@ -259,7 +259,7 @@ body {
 
     /* Adjust game type icon labels */
     .btn--big::after {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         margin-top: 5px;
     }
 
@@ -302,3 +302,34 @@ body {
 }
 
 /* Media query 375px screen size and down */
+@media screen and (max-width: 375px) {
+  /* Adjust game type icons */
+  .btn--big {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Adjust game type icon labels */
+  .btn--big::after {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+
+  /* Adjust game type icon container */
+  .question-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Adjust question area */
+  .question-area .question {
+    font-size: 1rem;
+  }
+}

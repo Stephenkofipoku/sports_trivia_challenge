@@ -9,3 +9,14 @@ Explore various categories such as Sports Trivia, Sports History, Sports Figures
 ## Purpose
 
 The purpose of the website is to provide an engaging Sports Trivia Challenge for users to test their sports knowledge. With a variety of game types and responsive design, the website offers an interactive experience where players can select their preferred category, answer trivia questions, and earn points. The website aims to entertain and challenge sports enthusiasts while providing a seamless user experience across different screen sizes. Whether playing on a desktop or mobile device, users can enjoy the Sports Trivia Challenge and have fun while expanding their sports knowledge.
+
+## Design
+
+### Wireframe
+The basic design and structure of the website was done using Balsamiq wireframe. 
+
+### Sketches Of The Sports Trivia Challenge
+
+The one page website was sketched out with Balsamiq wireframe as seen below:
+
+![Sports Trivia Challenge](./documents/sports-trivia-wireframe.png)
