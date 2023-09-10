@@ -20,3 +20,11 @@ The basic design and structure of the website was done using Balsamiq wireframe.
 The one page website was sketched out with Balsamiq wireframe as seen below:
 
 ![Sports Trivia Challenge](./documents/sports-trivia-wireframe.png)
+
+### Color Scheme
+The color panel of the website is shown below with a palette generated from colormind. These colors are carefully selected to make the website attractive and to give better visibility to users.
+
+![Sports Trivia Challenge color pallete](./documents/sports-trivia-color-pallete.png)
+
+### Typography
+Google fonts and FontAwesome is used for this website. 
