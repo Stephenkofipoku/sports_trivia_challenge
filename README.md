@@ -22,9 +22,40 @@ The one page website was sketched out with Balsamiq wireframe as seen below:
 ![Sports Trivia Challenge](./documents/sports-trivia-wireframe.png)
 
 ### Color Scheme
-The color panel of the website is shown below with a palette generated from colormind. These colors are carefully selected to make the website attractive and to give better visibility to users.
+The color panel of the website is shown below with a palette generated from colormind. These colors are carefully selected to make the website attractive and to give adequate accessibility and readability.
 
 ![Sports Trivia Challenge color pallete](./documents/sports-trivia-color-pallete.png)
 
 ### Typography
-Google fonts and FontAwesome is used for this website. 
+Google fonts and FontAwesome is used for this website. The Google fonts 
+
+### Imagery
+The logo and icons on the Sports Trivia Challenge website were taken from Font Awesome website.
+
+![Sports Trivia Challenge logo and icons](./documents/sports-trivia-logo-icons.png)
+
+### Features
+The Sports Trivia Challenge website is a one page website with these features.
+Logo and header, Game area with 5 game types represented by icons and name of the game type. The question area and score area and an instruction button.
+
+### Existing Features
+- Logo
+  The logo is on top placed just before the header and centered with the header.
+  
+- The Header 
+  The header placed just after the logo which captures the essence of the website.
+  
+- The Game Type Area
+  The game type area has the icons with labels of the game type beneath them.
+  ![The Game Type Area](./documents/sports-trivia-gametype-icons.png)
+  
+- The Question Area
+  The game question area comes just beneath the game type icons and label which is the area that displays the question to be answered.
+  ![Sports Trivia Question Area](./documents/sports-trivia-question-area.png)
+- The Answer Area
+  The game answer area beneath the question area and presents users with 3 options of answers to select from.
+  ![The Game Answer Area](./documents/sports-trivia-answer-area.png)
+- The Score Acrea
+  The game score area has two socre items, correct answers and incorrect answers, which records the results of what has been answered by the user. The defaul score is zero for each of the items.
+  ![The Game Score Area](./documents/sports-trivia-score-area.png)
+- 
