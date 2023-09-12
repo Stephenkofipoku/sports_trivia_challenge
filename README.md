@@ -86,3 +86,18 @@ This project was created using only HTML, CSS and JavaScript.
 - <https://ui.dev/amiresponsive> - to check site responsiveness
 - <https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln> - to check the flow of the header, logo and icons at different screen sizes and making sure there are no overflows and distortions.
 
+## Deployment
+
+  The depoymnent was done very early on in the project.
+  The deployment of the project was done in the following steps:
+
+- Forking the repo: The repository was created in GitHub by forking a copy from the original Code Institute repo template. This was done on GitHub by clicking the "Fork" button to create a copy of the original repository.
+- Launching in IDE: After forking the repository, it was cloned or copied into Codeanywhere and opened by creating a new workspace.
+- Git add/commit/push to GitHub: With the project open in your Codeanywhere, changes were made to the codebase and after desired changes, Git commands to stage the modified files (git add), create a commit with a descriptive message (git commit), and push the changes to your forked repository on GitHub (git push) were done.
+- Settings: In the repository's settings on GitHub, the configuration of the branch from the main was done for deploymnent to setup up the branch for deployment.
+- Pages: GitHub Pages which has the facility to host your website directly from my GitHub repository was utilized. This was enabled in GitHub Pages by navigating to the repository's settings and locating the "GitHub Pages" section. Here, the branch to deploy was configured of the website's domain as required.
+- Choosing a branch & deploying: In the GitHub Pages settings, a selection of the branch that contains the code of the website. GitHub then built and deployed the website using the code from the selected main. The following deployment address was created from which the website can be accessed:
+  
+   [Sports Trivia Challenge](https://stephenkofipoku.github.io/sports_trivia_challenge/)
+
+## User Stories
