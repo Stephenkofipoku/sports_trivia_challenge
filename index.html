@@ -19,12 +19,16 @@
   </head>
 
   <body>
+    <!-- Game header and logo -->
     <h1 class="heading">
       <img class="logo" src="assets/images/sport.png" alt="logo" />Sports Trivia
       Challenge
     </h1>
+
+    <!-- Game area and control -->
     <div class="game-area">
       <div class="controls-area">
+        <!-- Game types -->
         <button
           id="history"
           data-type="addition"
@@ -66,12 +70,16 @@
           <i class="fa-solid fa-quote-left"></i>
         </button>
       </div>
+
+      <!-- Game question area -->
       <div class="question-area">
         <div id="history-question" class="question-container"></div>
         <div id="rules-question" class="question-container"></div>
         <div id="records-question" class="question-container"></div>
         <div id="teams-question" class="question-container"></div>
         <div id="quotes-question" class="question-container"></div>
+
+        <!-- Game answer -->
         <div class="answer-container">
           <p class="answer-message">Select Answer:</p>
           <label class="answer-option">
@@ -92,18 +100,21 @@
         Submit Answer
       </button>
     </div>
+
+    <!-- Game score area -->
     <div class="score-area">
       <p class="scores">Correct Answers <span id="score">0</span></p>
       <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
 
+    <!-- Game instructions -->
     <button id="instruction-button">Instructions</button>
 
     <div id="modal-overlay">
       <div id="modal">
         <h2>Instructions</h2>
         <p>
-            Select a game type and choose an answer from the options provided.
+          Select a game type and choose an answer from the options provided.
         </p>
         <button id="close-modal">Close</button>
       </div>
