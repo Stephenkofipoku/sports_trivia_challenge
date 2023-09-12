@@ -101,6 +101,14 @@ This project was created using only HTML, CSS and JavaScript.
    [Sports Trivia Challenge](https://stephenkofipoku.github.io/sports_trivia_challenge/)
 
 ## User Stories
+- User Story 1 (25 year old male): 
+As a sports enthusiast, I want to test my knowledge and challenge myself with the Sports Trivia Challenge game. I've heard great things about its diverse range of sports questions and engaging gameplay. I'm excited to see how many correct answers I can get and improve my sports knowledge along the way.
+
+- User Story 2 (19 year old female): 
+As a competitive player, I am always looking for new games to challenge my friends. The Sports Trivia Challenge game seems like the perfect fit. With its random selection of questions and scoring system, I can compete with my friends to see who can answer the most questions correctly. I can't wait to invite my friends and have an exciting trivia showdown.
+
+- User Story 3 (20 year old male): 
+As a casual gamer, I enjoy playing games that are both fun and educational. The Sports Trivia Challenge game caught my attention with its interactive gameplay and sports-themed questions. It's a great way for me to relax and learn interesting facts about various sports. The option to select different game types adds variety, keeping the game fresh and engaging each time I play.
 
 ## Testing and Solved
 
