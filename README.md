@@ -101,3 +101,15 @@ This project was created using only HTML, CSS and JavaScript.
    [Sports Trivia Challenge](https://stephenkofipoku.github.io/sports_trivia_challenge/)
 
 ## User Stories
+
+## Testing and Solved
+
+| **TEST**                                        | **ACTION**                                                      | **EXPECTATION**                                                                                      | **RESULT**        |
+| ----------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------- |
+| Home page                                       | Using Chrom Dev Tools size to 1920px             | Elements and flow looks good @ 1920px and down                      | Works as expected |
+| Home Page                                       | Using Chrom Dev Tools size at 950px              | Elements and flow looks good @ 950px and down.                      | Works as expected |
+| Question Area                                   | Display randomly question of the game type       | Random display of questions       | Works as expected |
+| Answer area                                     | Displays the 3 options of answers for selection  | A click on any of the option should select an answer to the question | Works as expected |
+| Score area                                      | Displays the score for correct and incorrect answers and | Tallies the score of correct and incorrect answers | Works as expected |
+| Instruction button                              | Click to display instruction for the game    | A new tab opens to the social media page                                                             | Works as expected |
+
