@@ -46,7 +46,7 @@ Logo and header, Game area with 5 game types represented by icons and name of th
   The header placed just after the logo which captures the essence of the website.
   
 - The Game Type Area
-  The game type area has the icons with labels of the game type beneath them.
+  The game type area has the icons with labels of the game type beneath them. The sports trivia challenge has five game types and each game type has five question and users are given three options of answers to make a selection. When a question is answered, a user is immediately alerted with a correct answer or wrong aswer message and the corresponding score awarded at the score area.
   ![The Game Type Area](./documents/sports-trivia-gametype-icons.png)
   
 - The Question Area
@@ -58,4 +58,31 @@ Logo and header, Game area with 5 game types represented by icons and name of th
 - The Score Acrea
   The game score area has two socre items, correct answers and incorrect answers, which records the results of what has been answered by the user. The defaul score is zero for each of the items.
   ![The Game Score Area](./documents/sports-trivia-score-area.png)
-- 
+- The Instruction button
+  The instruction area gives users information on how to play the game when clikced.
+  ![The Game Instructions](./documents/sports-trivia-instruction-button.png)
+
+### Accessibility
+The website is made accessible-friendly as possible through the following measures:
+- Utilizing semantic HTML to provide meaningful structure and enhance accessibility.
+- Incorporating descriptive alt attributes for images on the site to provide alternative text for screen readers.
+- Ensuring an adequate color contrast across the site to improve readability for users with visual impairments. I employed the contrast checker provided by colormind to validate the contrast ratio between the selected foreground color and background color.
+
+By implementing the above measures the overall accessibiity of the website is improved.
+
+## Technologies Employed
+
+### Languagues Employed
+This project was created using only HTML, CSS and JavaScript.
+
+### Frameworks, Libraries & Programs Employed
+
+- GitHub for commits/deploys
+- Codeanywhere
+- CSS, HTML, JavaScript
+- GoogleFonts
+- Balsamiq Wireframes - for wireframe design
+- FontAwesome for logo and game type icons
+- <https://ui.dev/amiresponsive> - to check site responsiveness
+- <https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln> - to check the flow of the header, logo and icons at different screen sizes and making sure there are no overflows and distortions.
+
