@@ -58,7 +58,7 @@ body {
     font-size: 1.2rem;
 }
 
-/* Style of buttons */
+/* Style of divs */
 .btn:focus {
     outline: none;
 }
@@ -124,8 +124,8 @@ body {
     border-radius: 50%;
     background-color: white;
     border: 10px solid;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     font-size: 3.2rem;
     margin: 0 30px;
     transition: all 0.5s;
@@ -186,14 +186,27 @@ body {
     cursor: pointer;
 }
 
+/* Your existing CSS styles */
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    letter-spacing: 2px;
+    font-family: "Lato", sans-serif;
+    margin-top: 15px;
+}
+
 /* Media query for screen size 982px and down */
 @media screen and (max-width: 982px) {
 
     /* Adjust game type icons and labels */
     .btn--big {
-        width: 100px;
-        height: 100px;
-        font-size: 1.7rem;
+        width: 80px;
+        height: 90px;
+        font-size: 1.8rem;
         margin: 0 5px;
         padding-top: 0;
         display: flex;
@@ -230,7 +243,7 @@ body {
     }
 
     .btn--big {
-        width: 80px;
+        width: 75px;
         height: 80px;
         font-size: 1.5rem;
         margin: 0 5px;
@@ -303,33 +316,34 @@ body {
 
 /* Media query 375px screen size and down */
 @media screen and (max-width: 375px) {
-  /* Adjust game type icons */
-  .btn--big {
-    width: 50px;
-    height: 50px;
-    font-size: 1.4rem;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  /* Adjust game type icon labels */
-  .btn--big::after {
-    font-size: 0.7rem;
-    margin-top: 5px;
-  }
+    /* Adjust game type icons */
+    .btn--big {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  /* Adjust game type icon container */
-  .question-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    /* Adjust game type icon labels */
+    .btn--big::after {
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
 
-  /* Adjust question area */
-  .question-area .question {
-    font-size: 1rem;
-  }
+    /* Adjust game type icon container */
+    .question-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Adjust question area */
+    .question-area .question {
+        font-size: 1rem;
+    }
 }

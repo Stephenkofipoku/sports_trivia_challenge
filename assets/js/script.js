@@ -215,7 +215,9 @@ const quotesQuestions = [
 let currentQuestionIndex = 0;
 let currentGameType = historyQuestions; // Set the default game type to history
 
-// Function to display a random question
+/**
+ * Function to display a random question
+ */
 function displayRandomQuestion() {
     const randomQuestionIndex = Math.floor(Math.random() * currentGameType.length);
     const randomQuestion = currentGameType[randomQuestionIndex];

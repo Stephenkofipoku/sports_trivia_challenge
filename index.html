@@ -22,58 +22,59 @@
 
   <body>
     <!-- Game header and logo -->
-    <h1 class="heading">
-      <img
+    <header>
+        <h1 class="heading">
+        <img
         class="logo"
         src="assets/images/sport.png"
         alt="logo of the website"
       />Sports Trivia Challenge
-    </h1>
-
+        </h1>
+    </header>
     <!-- Game area and control -->
     <div class="game-area">
       <div class="controls-area">
         <!-- Game types -->
-        <button
+        <div
           id="history"
           data-type="addition"
           class="btn btn--big btn--history"
           data-label="history"
         >
           <i class="fa-solid fa-landmark"></i>
-        </button>
-        <button
+        </div>
+        <div
           id="rules"
           data-type="addition"
           class="btn btn--big btn--rules"
           data-label="rules"
         >
           <i class="fa-solid fa-scale-balanced"></i>
-        </button>
-        <button
+        </div>
+        <div
           id="records"
           data-type="addition"
           class="btn btn--big btn--records"
           data-label="records"
         >
           <i class="fa-solid fa-record-vinyl"></i>
-        </button>
-        <button
+        </div>
+        <div
           id="teams"
           data-type="addition"
           class="btn btn--big btn--teams"
           data-label="teams"
         >
           <i class="fa-solid fa-people-group"></i>
-        </button>
-        <button
+        </div>
+        <div
           id="quotes"
           data-type="addition"
           class="btn btn--big btn--quotes"
           data-label="quotes"
         >
           <i class="fa-solid fa-quote-left"></i>
-        </button>
+        </div>
       </div>
 
       <!-- Game question area -->
@@ -165,6 +166,10 @@
         <button id="close-modal">Close</button>
       </div>
     </div>
+
+    <footer>
+        <p>This game is for educational purpose only</p>
+    </footer>
     <script src="assets/js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/64de89f724.js"
