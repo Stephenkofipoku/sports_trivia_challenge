@@ -186,8 +186,19 @@ body {
     cursor: pointer;
 }
 
-/* Your existing CSS styles */
+/* Timer style */
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
+/* Your footer styles */
 footer {
     background-color: #f2f2f2;
     padding: 20px;
@@ -255,13 +266,75 @@ footer {
     }
 }
 
-/* Media query screen size 520px and down */
-@media screen and (max-width: 520px) {
+/* Media query scren size 672px and down */
+@media screen and (max-width: 672px) {
+    .game-area {
+        width: 95%;
+        height: 80vh;
+    }
+
+    .question-area {
+        width: 80%;
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+    .btn--big {
+        width: 60px;
+        height: 65px;
+        font-size: 1.2rem;
+        margin: 0 5px;
+        flex-direction: column;
+    }
+
+    .score-area {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    /* Adjust game type icon labels */
+    .btn--big::after {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+}
+
+/* Media query screen size 585px and down */
+@media screen and (max-width: 585px) {
 
     /* Adjust game type icons */
     .btn--big {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 55px;
+        font-size: 1.2rem;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust game type icon labels */
+    .btn--big::after {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    /* Adjust game type icon container */
+    .question-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+/* Media query screen size 530px and down */
+@media screen and (max-width: 530px) {
+
+    /* Adjust game type icons */
+    .btn--big {
+        width: 40px;
+        height: 45px;
         font-size: 1.2rem;
         margin: 5px;
         display: flex;
@@ -290,8 +363,8 @@ footer {
 
     /* Adjust game type icons */
     .btn--big {
-        width: 60px;
-        height: 60px;
+        width: 30px;
+        height: 40px;
         font-size: 1.2rem;
         margin: 5px;
         display: flex;
@@ -314,24 +387,20 @@ footer {
     }
 }
 
-/* Media query 375px screen size and down */
-@media screen and (max-width: 375px) {
+/* Media query 425px screen size and down */
+@media screen and (max-width: 425px) {
 
     /* Adjust game type icons */
     .btn--big {
-        width: 50px;
-        height: 50px;
-        font-size: 1.4rem;
-        margin: 5px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 
     /* Adjust game type icon labels */
-    .btn--big::after {
-        font-size: 0.7rem;
+    .btn--big-label {
+        display: block;
         margin-top: 5px;
     }
 

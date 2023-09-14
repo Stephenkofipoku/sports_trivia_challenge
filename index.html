@@ -23,13 +23,13 @@
   <body>
     <!-- Game header and logo -->
     <header>
-        <h1 class="heading">
+      <h1 class="heading">
         <img
-        class="logo"
-        src="assets/images/sport.png"
-        alt="logo of the website"
-      />Sports Trivia Challenge
-        </h1>
+          class="logo"
+          src="assets/images/sport.png"
+          alt="logo of the website"
+        />Sports Trivia Challenge
+      </h1>
     </header>
     <!-- Game area and control -->
     <div class="game-area">
@@ -166,9 +166,13 @@
         <button id="close-modal">Close</button>
       </div>
     </div>
+    <div id="timer">00:00:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
 
     <footer>
-        <p>This game is for educational purpose only</p>
+      <p>This game is for educational purpose only</p>
     </footer>
     <script src="assets/js/script.js"></script>
     <script
