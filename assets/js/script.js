@@ -18,7 +18,7 @@ const incorrectElement = document.getElementById('incorrect');
 // Timer functionality
 let timer;
 let timeInSeconds = 0;
-
+let isTimerRunning = false;
 
 // History questions and answers
 const historyQuestions = [
@@ -266,17 +266,24 @@ quotesButton.addEventListener('click', () => {
 
 // Default game selection
 document.addEventListener("DOMContentLoaded", function () {
-  startTimer();
   document.getElementById("history").classList.add("selected");
 });
 
-// Remove default game selection on button click
+// Remove default game selection on button click and start/stop/reset timer
 document.querySelectorAll(".btn").forEach(function (button) {
   button.addEventListener("click", function () {
     document.querySelectorAll(".btn").forEach(function (btn) {
       btn.classList.remove("selected");
     });
     this.classList.add("selected");
+
+    if (this.id === "stop") {
+      stopTimer();
+    } else if (this.id === "reset") {
+      resetTimer();
+    } else {
+      startTimer();
+    }
   });
 });
 
@@ -395,15 +402,22 @@ function handleAnswerSubmission() {
  * Reset Timer function
  */
 function startTimer() {
+  if (!isTimerRunning) {
     timer = setInterval(incrementTimer, 1000);
+    isTimerRunning = true;
+  }
 }
+
 function stopTimer() {
-    clearInterval(timer);
+  clearInterval(timer);
+  isTimerRunning = false;
 }
+
 function resetTimer() {
-    clearInterval(timer);
-    timeInSeconds = 0;
-    document.getElementById("timer").textContent = "00:00:00";
+  clearInterval(timer);
+  timeInSeconds = 0;
+  document.getElementById("timer").textContent = "00:00:00";
+  isTimerRunning = false;
 }
 
 /**
@@ -419,6 +433,7 @@ function incrementTimer() {
     const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
     document.getElementById("timer").textContent = formattedTime;
 }
+
 function padZero(value) {
-  return value.toString().padStart(2, "0");
+    return value.toString().padStart(2, "0");
 }
