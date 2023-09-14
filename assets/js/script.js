@@ -1,3 +1,4 @@
+// Variable Declarations
 // Get the instruction button element
 const instructionButton = document.getElementById('instruction-button');
 
@@ -7,15 +8,6 @@ const modalOverlay = document.getElementById('modal-overlay');
 // Get the close modal button element
 const closeModalButton = document.getElementById('close-modal');
 
-// Function to toggle the visibility of the modal overlay
-function toggleModal() {
-    modalOverlay.style.display = modalOverlay.style.display === 'none' ? 'flex' : 'none';
-}
-
-// Add event listeners to the instruction button and close modal button
-instructionButton.addEventListener('click', toggleModal);
-closeModalButton.addEventListener('click', toggleModal);
-
 // Get the question area element
 const questionArea = document.querySelector('.question-area');
 
@@ -23,9 +15,6 @@ const questionArea = document.querySelector('.question-area');
 const scoreElement = document.getElementById('score');
 const incorrectElement = document.getElementById('incorrect');
 
-// Set the initial score and incorrect answer count
-let score = 0;
-let incorrect = 0;
 
 // History questions and answers
 const historyQuestions = [
@@ -212,99 +201,26 @@ const quotesQuestions = [
     },
 ];
 
-let currentQuestionIndex = 0;
-let currentGameType = historyQuestions; // Set the default game type to history
-
-/**
- * Function to display a random question
- */
-function displayRandomQuestion() {
-    const randomQuestionIndex = Math.floor(Math.random() * currentGameType.length);
-    const randomQuestion = currentGameType[randomQuestionIndex];
-
-    // Clear previous options
-    questionArea.innerHTML = '';
-
-    const questionElement = document.createElement('div');
-    questionElement.classList.add('question');
-    questionElement.textContent = randomQuestion.question;
-    questionArea.appendChild(questionElement);
-
-    const optionsContainer = document.createElement('div');
-    optionsContainer.classList.add('options-container');
-
-    for (let i = 0; i < randomQuestion.options.length; i++) {
-        const option = randomQuestion.options[i];
-        const optionElement = document.createElement('button');
-        optionElement.textContent = option;
-        optionElement.classList.add('option');
-        optionElement.setAttribute('data-index', i);
-        optionElement.addEventListener('click', handleAnswerSelection);
-        optionsContainer.appendChild(optionElement);
-    }
-
-    questionArea.appendChild(optionsContainer);
-
-    // Store the index of the current question
-    currentQuestionIndex = randomQuestionIndex;
-}
-
-// Display a random history question initially
-displayRandomQuestion();
-
-// Function to check the selected answer
-function checkAnswer(selectedIndex) {
-    const question = currentGameType[currentQuestionIndex];
-
-    if (selectedIndex === question.correctAnswer) {
-        incrementScore();
-        alert("Correct answer!");
-    } else {
-        incrementIncorrect();
-        alert("Wrong answer!");
-    }
-
-    // Display a new random question
-    displayRandomQuestion();
-}
-
-// Function to increment the score
-function incrementScore() {
-    score++;
-    scoreElement.textContent = score;
-}
-
-// Function to increment the incorrect answer count
-function incrementIncorrect() {
-    incorrect++;
-    incorrectElement.textContent = incorrect;
-}
-
-// Function to handle answer selection
-function handleAnswerSelection(event) {
-    const selectedIndex = parseInt(event.target.getAttribute('data-index'));
-    checkAnswer(selectedIndex);
-}
+// Get the game type buttons
+const historyButton = document.getElementById('history');
+const rulesButton = document.getElementById('rules');
+const recordsButton = document.getElementById('records');
+const teamsButton = document.getElementById('teams');
+const quotesButton = document.getElementById('quotes');
 
 // Get the submit button element
 const submitButton = document.getElementById('submit-button');
 
+
+let incorrect = 0;
+
+// Event Listeners
+// Add event listeners to the instruction button and close modal button
+instructionButton.addEventListener('click', toggleModal);
+closeModalButton.addEventListener('click', toggleModal);
+
 // Add event listener to the submit button
 submitButton.addEventListener('click', handleAnswerSubmission);
-
-// Function to handle answer submission
-function handleAnswerSubmission() {
-    // Check if an answer has been selected
-    const selectedOption = questionArea.querySelector('.option.selected');
-    if (selectedOption) {
-        const selectedIndex = parseInt(selectedOption.getAttribute('data-index'));
-        checkAnswerSubmission(selectedIndex);
-        // Remove the selected class from the option
-        selectedOption.classList.remove('selected');
-    } else {
-        alert("Please select an answer.");
-    }
-}
 
 // Add event listeners to options for selection
 questionArea.addEventListener('click', (event) => {
@@ -317,13 +233,6 @@ questionArea.addEventListener('click', (event) => {
         selectedOption.classList.add('selected');
     }
 });
-
-// Get the game type buttons
-const historyButton = document.getElementById('history');
-const rulesButton = document.getElementById('rules');
-const recordsButton = document.getElementById('records');
-const teamsButton = document.getElementById('teams');
-const quotesButton = document.getElementById('quotes');
 
 // Add event listeners to game type buttons
 historyButton.addEventListener('click', () => {
@@ -350,3 +259,114 @@ quotesButton.addEventListener('click', () => {
     currentGameType = quotesQuestions;
     displayRandomQuestion();
 });
+
+/**
+ * Toggle the visibility of the modal overlay
+ */
+function toggleModal() {
+    modalOverlay.style.display = modalOverlay.style.display === 'none' ? 'flex' : 'none';
+}
+
+// Set the initial score and incorrect answer count
+let score = 0;
+
+let currentQuestionIndex = 0;
+let currentGameType = historyQuestions; // Set the default game type to history
+
+/**
+ * Displays a random question from the current game type.
+ * Clears previous options
+ * Stores the index of the current question
+ */
+function displayRandomQuestion() {
+    const randomQuestionIndex = Math.floor(Math.random() * currentGameType.length);
+    const randomQuestion = currentGameType[randomQuestionIndex];
+
+    questionArea.innerHTML = '';
+
+    const questionElement = document.createElement('div');
+    questionElement.classList.add('question');
+    questionElement.textContent = randomQuestion.question;
+    questionArea.appendChild(questionElement);
+
+    const optionsContainer = document.createElement('div');
+    optionsContainer.classList.add('options-container');
+
+    for (let i = 0; i < randomQuestion.options.length; i++) {
+        const option = randomQuestion.options[i];
+        const optionElement = document.createElement('button');
+        optionElement.textContent = option;
+        optionElement.classList.add('option');
+        optionElement.setAttribute('data-index', i);
+        optionElement.addEventListener('click', handleAnswerSelection);
+        optionsContainer.appendChild(optionElement);
+    }
+
+    questionArea.appendChild(optionsContainer);
+
+    currentQuestionIndex = randomQuestionIndex;
+}
+
+/**
+ * Displays a random question from the current game type.
+ */
+displayRandomQuestion();
+
+/**
+ * Checks the selected answer against the correct answer and updates the score accordingly.
+ * @param {*} selectedIndex - The index of the selected answer option.
+ */
+function checkAnswer(selectedIndex) {
+    const question = currentGameType[currentQuestionIndex];
+
+    if (selectedIndex === question.correctAnswer) {
+        incrementScore();
+        alert("Correct answer!");
+    } else {
+        incrementIncorrect();
+        alert("Wrong answer!");
+    }
+
+    displayRandomQuestion();
+}
+
+/**
+ * Increments the score by 1 and updates the score element.
+ */
+function incrementScore() {
+    score++;
+    scoreElement.textContent = score;
+}
+
+/**
+ * Increments the incorrect answer count by 1 and updates the incorrect answer element.
+ */
+function incrementIncorrect() {
+    incorrect++;
+    incorrectElement.textContent = incorrect;
+}
+
+/**
+ * Handles the selection of an answer option by calling the checkAnswer() function.
+ * @param {*} event - The event object representing the answer selection.
+ */
+function handleAnswerSelection(event) {
+    const selectedIndex = parseInt(event.target.getAttribute('data-index'));
+    checkAnswer(selectedIndex);
+}
+
+/**
+ * Handles the submission of an answer by calling the checkAnswerSubmission() function.
+ */
+function handleAnswerSubmission() {
+    // Check if an answer has been selected
+    const selectedOption = questionArea.querySelector('.option.selected');
+    if (selectedOption) {
+        const selectedIndex = parseInt(selectedOption.getAttribute('data-index'));
+        checkAnswerSubmission(selectedIndex);
+        // Remove the selected class from the option
+        selectedOption.classList.remove('selected');
+    } else {
+        alert("Please select an answer.");
+    }
+}
