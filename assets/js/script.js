@@ -15,6 +15,10 @@ const questionArea = document.querySelector('.question-area');
 const scoreElement = document.getElementById('score');
 const incorrectElement = document.getElementById('incorrect');
 
+// Timer functionality
+let timer;
+let timeInSeconds = 0;
+
 
 // History questions and answers
 const historyQuestions = [
@@ -260,6 +264,22 @@ quotesButton.addEventListener('click', () => {
     displayRandomQuestion();
 });
 
+// Default game selection
+document.addEventListener("DOMContentLoaded", function () {
+  startTimer();
+  document.getElementById("history").classList.add("selected");
+});
+
+// Remove default game selection on button click
+document.querySelectorAll(".btn").forEach(function (button) {
+  button.addEventListener("click", function () {
+    document.querySelectorAll(".btn").forEach(function (btn) {
+      btn.classList.remove("selected");
+    });
+    this.classList.add("selected");
+  });
+});
+
 /**
  * Toggle the visibility of the modal overlay
  */
@@ -359,14 +379,46 @@ function handleAnswerSelection(event) {
  * Handles the submission of an answer by calling the checkAnswerSubmission() function.
  */
 function handleAnswerSubmission() {
-    // Check if an answer has been selected
     const selectedOption = questionArea.querySelector('.option.selected');
     if (selectedOption) {
         const selectedIndex = parseInt(selectedOption.getAttribute('data-index'));
         checkAnswerSubmission(selectedIndex);
-        // Remove the selected class from the option
         selectedOption.classList.remove('selected');
     } else {
         alert("Please select an answer.");
     }
+}
+
+/**
+ * Start Timer function
+ * Stop Timer function
+ * Reset Timer function
+ */
+function startTimer() {
+    timer = setInterval(incrementTimer, 1000);
+}
+function stopTimer() {
+    clearInterval(timer);
+}
+function resetTimer() {
+    clearInterval(timer);
+    timeInSeconds = 0;
+    document.getElementById("timer").textContent = "00:00:00";
+}
+
+/**
+ * Timer Increment function
+ * padZero function
+ */
+function incrementTimer() {
+    timeInSeconds++;
+    const hours = Math.floor(timeInSeconds / 3600);
+    const minutes = Math.floor((timeInSeconds % 3600) / 60);
+    const seconds = timeInSeconds % 60;
+
+    const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+    document.getElementById("timer").textContent = formattedTime;
+}
+function padZero(value) {
+  return value.toString().padStart(2, "0");
 }
