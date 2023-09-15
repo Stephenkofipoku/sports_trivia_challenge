@@ -123,5 +123,11 @@ As a casual gamer, I enjoy playing games that are both fun and educational. The 
 
 ## Validator and Testing
 - HTML: No errors were returned when passing through the official W3C validator.
-  ![W3 HTML Validator results](./documents/)
+  ![W3 HTML Validator results](./documents/sports-trivia-w3_html_validation1.png)
+
+  ![W3 HTML Validator results 2](./documents/sports-trivia-w3_html_validation2.png)
+- CSS: No erros were returned when passing through the official W3 validator.
+  ![W3 CSS Validator results](./documents/sports-trivia-w3_css_validation.png)
+- JavaScript: No issues were turned when passing through the official validator, JSHINT.
+  ![JSHINT Validator results](./documents/sports-trivia-jshint-screenshot.png)
 - 
