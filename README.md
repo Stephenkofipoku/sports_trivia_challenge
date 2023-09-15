@@ -169,7 +169,7 @@ As a casual gamer, I enjoy playing games that are both fun and educational. The 
   ![W3 CSS Validator results](./documents/sports-trivia-w3_css_validation.png)
 - JavaScript: No issues were turned when passing through the official validator, JSHINT.
   ![JSHINT Validator results](./documents/sports-trivia-jshint-screenshot.png)
-
+- Note: The timer and submit answer button have not worked well as expected hope to to develop this further after grading to get these to work better than currently is.
 ## Credits
 
 ### Code Used
