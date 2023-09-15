@@ -266,25 +266,25 @@ quotesButton.addEventListener('click', () => {
 
 // Default game selection
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("history").classList.add("selected");
+    document.getElementById("history").classList.add("selected");
 });
 
 // Remove default game selection on button click and start/stop/reset timer
 document.querySelectorAll(".btn").forEach(function (button) {
-  button.addEventListener("click", function () {
-    document.querySelectorAll(".btn").forEach(function (btn) {
-      btn.classList.remove("selected");
-    });
-    this.classList.add("selected");
+    button.addEventListener("click", function () {
+        document.querySelectorAll(".btn").forEach(function (btn) {
+            btn.classList.remove("selected");
+        });
+        this.classList.add("selected");
 
-    if (this.id === "stop") {
-      stopTimer();
-    } else if (this.id === "reset") {
-      resetTimer();
-    } else {
-      startTimer();
-    }
-  });
+        if (this.id === "stop") {
+            stopTimer();
+        } else if (this.id === "reset") {
+            resetTimer();
+        } else {
+            startTimer();
+        }
+    });
 });
 
 /**
@@ -388,9 +388,6 @@ function handleAnswerSelection(event) {
 function handleAnswerSubmission() {
     const selectedOption = questionArea.querySelector('.option.selected');
     if (selectedOption) {
-        const selectedIndex = parseInt(selectedOption.getAttribute('data-index'));
-        checkAnswerSubmission(selectedIndex);
-        selectedOption.classList.remove('selected');
     } else {
         alert("Please select an answer.");
     }
@@ -402,22 +399,22 @@ function handleAnswerSubmission() {
  * Reset Timer function
  */
 function startTimer() {
-  if (!isTimerRunning) {
-    timer = setInterval(incrementTimer, 1000);
-    isTimerRunning = true;
-  }
+    if (!isTimerRunning) {
+        timer = setInterval(incrementTimer, 1000);
+        isTimerRunning = true;
+    }
 }
 
 function stopTimer() {
-  clearInterval(timer);
-  isTimerRunning = false;
+    clearInterval(timer);
+    isTimerRunning = false;
 }
 
 function resetTimer() {
-  clearInterval(timer);
-  timeInSeconds = 0;
-  document.getElementById("timer").textContent = "00:00:00";
-  isTimerRunning = false;
+    clearInterval(timer);
+    timeInSeconds = 0;
+    document.getElementById("timer").textContent = "00:00:00";
+    isTimerRunning = false;
 }
 
 /**

@@ -121,3 +121,7 @@ As a casual gamer, I enjoy playing games that are both fun and educational. The 
 | Score area                                      | Displays the score for correct and incorrect answers and | Tallies the score of correct and incorrect answers | Works as expected |
 | Instruction button                              | Click to display instruction for the game    | A new tab opens to the social media page                                                             | Works as expected |
 
+## Validator and Testing
+- HTML: No errors were returned when passing through the official W3C validator.
+  ![W3 HTML Validator results](./documents/)
+- 

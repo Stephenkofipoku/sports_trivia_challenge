@@ -120,7 +120,7 @@ body {
 }
 
 .btn--big {
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     background-color: white;
     border: 10px solid;
@@ -145,6 +145,7 @@ body {
 
 .controls-area {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -363,8 +364,8 @@ footer {
 
     /* Adjust game type icons */
     .btn--big {
-        width: 30px;
-        height: 40px;
+        width: 20px;
+        height: 30px;
         font-size: 1.2rem;
         margin: 5px;
         display: flex;
@@ -387,20 +388,24 @@ footer {
     }
 }
 
-/* Media query 425px screen size and down */
-@media screen and (max-width: 425px) {
+/* Media query 450px and down */
+@media screen and (max-width: 450px) {
 
     /* Adjust game type icons */
     .btn--big {
+        width: 35px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin: 5px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
     /* Adjust game type icon labels */
-    .btn--big-label {
-        display: block;
+    .btn--big::after {
+        font-size: 0.5rem;
         margin-top: 5px;
     }
 
@@ -414,5 +419,40 @@ footer {
     /* Adjust question area */
     .question-area .question {
         font-size: 1rem;
+    }
+}
+
+/* Media query 320px and down */
+@media screen and (max-width: 320px) {
+
+    /* Adjust game type icons */
+    .btn--big {
+        width: 25px;
+        height: 35px;
+        font-size: 1rem;
+        margin: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust game type icon labels */
+    .btn--big::after {
+        font-size: 0.4rem;
+        margin-top: 3px;
+    }
+
+    /* Adjust game type icon container */
+    .question-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    /* Adjust question area */
+    .question-area .question {
+        font-size: 0.8rem;
     }
 }
