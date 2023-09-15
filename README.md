@@ -1,29 +1,31 @@
 # Sports Trivia Challenge README
 
 ## Contents
-- [Contents](#contents)
-- [Introduction](#introduction)
-- [Purpose](#purpose)
-- [Design](#design)
+- [Sports Trivia Challenge README](#sports-trivia-challenge-readme)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Purpose](#purpose)
+  - [Design](#design)
     - [Wireframe](#wireframe)
     - [Sketches Of The Sports Trivia Challenge](#sketches-of-the-sports-trivia-challenge)
     - [Color Scheme](#color-scheme)
     - [Typography](#typography)
     - [Imagery](#imagery)
     - [Features](#features)
+    - [Existing Features](#existing-features)
     - [Accessibility](#accessibility)
-- [Technologies Employed](#technologies-employed)
+  - [Technologies Employed](#technologies-employed)
     - [Languagues Employed](#languagues-employed)
     - [Frameworks, Libraries \& Programs Employed](#frameworks-libraries--programs-employed)
-- [Deployment](#deployment)
-- [User Stories](#user-stories)
-- [Testing and Solved](#testing-and-solved)
-- [Validator and Testing](#validator-and-testing)
-- [Credits](#credits)
+  - [Deployment](#deployment)
+  - [User Stories](#user-stories)
+  - [Testing and Solved](#testing-and-solved)
+  - [Validator and Testing](#validator-and-testing)
+  - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
     - [Media](#media)
-    - [Acknowledgement](acknowledgement)
+    - [Acknowledgement](#acknowledgement)
 
 
 ## Introduction
@@ -87,6 +89,9 @@ Logo and header, Game area with 5 game types represented by icons and name of th
 - The Instruction button
   The instruction area gives users information on how to play the game when clikced.
   ![The Game Instructions](./documents/sports-trivia-instruction-button.png)
+- The game timer area
+  This provides start, stop and reset time area for users
+  ![The Game timer]
 
 ### Accessibility
 The website is made accessible-friendly as possible through the following measures:
@@ -111,6 +116,10 @@ This project was created using only HTML, CSS and JavaScript.
 - FontAwesome for logo and game type icons
 - <https://ui.dev/amiresponsive> - to check site responsiveness
 - <https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln> - to check the flow of the header, logo and icons at different screen sizes and making sure there are no overflows and distortions.
+- Am I Responsive was used to check the various device breakpoints for responsive design, a snap short of the webpage at media screen sizes for responsive development.
+  ![I am responsive screenshot](./documents/sports-trivia-iamresponsive.png)
+- WAVE Evaluation tool was used to evaluate web accessibility within the browser.
+  ![Wave Evluation screenshot](./documents/sports-trivia-wave-report.png)
 
 ## Deployment
 
