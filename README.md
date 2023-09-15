@@ -115,11 +115,14 @@ As a casual gamer, I enjoy playing games that are both fun and educational. The 
 | **TEST**                                        | **ACTION**                                                      | **EXPECTATION**                                                                                      | **RESULT**        |
 | ----------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------- |
 | Home page                                       | Using Chrom Dev Tools size to 1920px             | Elements and flow looks good @ 1920px and down                      | Works as expected |
-| Home Page                                       | Using Chrom Dev Tools size at 950px              | Elements and flow looks good @ 950px and down.                      | Works as expected |
+| Home Page                                       | Using Chrom Dev Tools size at 995px              | Elements and flow looks good @ 995px and down                       | Works as expected |
+| Hompage looks good @ 768px and down             | Using Chrom Dev Tools size to 768px.             | Elements and flow looks good at 768px screen   | Works as expected |
+| Home page                                       | Using Chrom Dev Tools size to 672px, 585px, 530px, 480px, 450px, 320px | Elements and flow looks good at 672px, 585px, 520px, 480px, 450px and 320px screens | Works as expected |
 | Question Area                                   | Display randomly question of the game type       | Random display of questions       | Works as expected |
 | Answer area                                     | Displays the 3 options of answers for selection  | A click on any of the option should select an answer to the question | Works as expected |
 | Score area                                      | Displays the score for correct and incorrect answers and | Tallies the score of correct and incorrect answers | Works as expected |
 | Instruction button                              | Click to display instruction for the game    | A new tab opens to the social media page                                                             | Works as expected |
+| Game timer                                      | Start, Stop and Reset buttons for user session   | Click to start, top or reset game session | Works as expected |
 
 ## Validator and Testing
 - HTML: No errors were returned when passing through the official W3C validator.
