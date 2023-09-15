@@ -120,7 +120,8 @@ This project was created using only HTML, CSS and JavaScript.
   ![I am responsive screenshot](./documents/sports-trivia-iamresponsive.png)
 - WAVE Evaluation tool was used to evaluate web accessibility within the browser.
   ![Wave Evluation screenshot](./documents/sports-trivia-wave-report.png)
-
+- Google chrome Lighthouse was used to analyzed the website with the following results as shown in the snapshots of the reults: The results shows a lower performance score of 64 which is as a results of my internet connection as I am working from a remote site. During my review with my mentor, the lighthouse score from her end gave a good performance score above 90%.
+  ![Sports Triva Lighthouse Score](./documents/sports-trivia-lighthouse-score.png)
 ## Deployment
 
   The depoymnent was done very early on in the project.
