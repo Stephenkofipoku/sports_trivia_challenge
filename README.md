@@ -1,5 +1,31 @@
 # Sports Trivia Challenge README
 
+## Contents
+- [Contents](#contents)
+- [Introduction](#introduction)
+- [Purpose](#purpose)
+- [Design](#design)
+    - [Wireframe](#wireframe)
+    - [Sketches Of The Sports Trivia Challenge](#sketches-of-the-sports-trivia-challenge)
+    - [Color Scheme](#color-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+    - [Features](#features)
+    - [Accessibility](#accessibility)
+- [Technologies Employed](#technologies-employed)
+    - [Languagues Employed](#languagues-employed)
+    - [Frameworks, Libraries \& Programs Employed](#frameworks-libraries--programs-employed)
+- [Deployment](#deployment)
+- [User Stories](#user-stories)
+- [Testing and Solved](#testing-and-solved)
+- [Validator and Testing](#validator-and-testing)
+- [Credits](#credits)
+    - [Code Used](#code-used)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgement](acknowledgement)
+
+
 ## Introduction
 
 Welcome to Sports Trivia Challenge, the ultimate destination for all sports enthusiasts! Test your knowledge and compete against friends as you dive into the exciting world of sports trivia. With a wide range of categories and challenging questions, this interactive website will put your sports knowledge to the test.
@@ -133,4 +159,24 @@ As a casual gamer, I enjoy playing games that are both fun and educational. The 
   ![W3 CSS Validator results](./documents/sports-trivia-w3_css_validation.png)
 - JavaScript: No issues were turned when passing through the official validator, JSHINT.
   ![JSHINT Validator results](./documents/sports-trivia-jshint-screenshot.png)
-- 
+
+## Credits
+
+### Code Used
+
+- Inspiration was taken from the structural design of Love Maths source code from Code Institute.
+- README.md template from Code Institute.
+- Codes were edited using google and ChatGPT, an AI language model developedn by OpenAI.
+
+### Content
+
+- The content of the website was written by Stephen Opoku
+
+### Media
+
+- Logo and Icons from https://fontawesome.com/
+
+### Acknowledgement
+
+- My family for the support and encouragement through this project
+- My mentor, Lauren-Nicole for her valuable input and guidance on this project. Super grateful to her.
