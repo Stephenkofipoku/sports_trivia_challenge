@@ -211,15 +211,15 @@ footer {
     margin-top: 15px;
 }
 
-/* Media query for screen size 982px and down */
-@media screen and (max-width: 982px) {
+/* Media query for screen size 995px and down */
+@media screen and (max-width: 995px) {
 
     /* Adjust game type icons and labels */
     .btn--big {
         width: 80px;
         height: 90px;
         font-size: 1.8rem;
-        margin: 0 5px;
+        margin: 0 15px;
         padding-top: 0;
         display: flex;
         flex-direction: column;
@@ -317,7 +317,7 @@ footer {
 
     /* Adjust game type icon labels */
     .btn--big::after {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         margin-top: 5px;
     }
 
@@ -346,7 +346,7 @@ footer {
 
     /* Adjust game type icon labels */
     .btn--big::after {
-        font-size: 0.8rem;
+        font-size: 0.4rem;
         margin-top: 5px;
     }
 
@@ -364,8 +364,8 @@ footer {
 
     /* Adjust game type icons */
     .btn--big {
-        width: 20px;
-        height: 30px;
+        width: 35px;
+        height: 40px;
         font-size: 1.2rem;
         margin: 5px;
         display: flex;
@@ -376,7 +376,7 @@ footer {
 
     /* Adjust game type icon labels */
     .btn--big::after {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         margin-top: 5px;
     }
 
@@ -427,7 +427,7 @@ footer {
 
     /* Adjust game type icons */
     .btn--big {
-        width: 25px;
+        width: 30px;
         height: 35px;
         font-size: 1rem;
         margin: 3px;
